@@ -1,8 +1,8 @@
 package pw.avi
 
 import io.ktor.server.application.Application
-import io.ktor.server.application.ApplicationPlugin
 import io.ktor.server.application.ApplicationStopping
+import io.ktor.server.application.BaseApplicationPlugin
 import io.ktor.util.AttributeKey
 import org.koin.core.KoinApplication
 import org.koin.dsl.KoinAppDeclaration
@@ -24,7 +24,7 @@ class Koin private constructor(val koinApp: KoinApplication) {
 
     }
 
-    companion object Plugin : ApplicationPlugin<Application, Configuration, Koin> {
+    companion object Plugin : BaseApplicationPlugin<Application, Configuration, Koin> {
 
         override val key: AttributeKey<Koin>
             get() = AttributeKey("Koin")

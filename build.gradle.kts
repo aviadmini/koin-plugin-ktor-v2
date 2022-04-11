@@ -1,5 +1,5 @@
 plugins {
-    kotlin("jvm") version "1.6.10"
+    kotlin("jvm") version "1.6.20"
     `maven-publish`
 }
 
@@ -19,7 +19,7 @@ dependencies {
     compileOnly("io.insert-koin:koin-core:$koinVersion")
 
     // ktor
-    val ktorVersion = "2.0.0-beta-1"
+    val ktorVersion = "2.0.0"
     compileOnly("io.ktor:ktor-server-core:$ktorVersion")
 
 }
